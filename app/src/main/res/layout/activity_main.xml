@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnsecond"
+        android:layout_width="332dp"
+        android:layout_height="45dp"
+        android:text="Segundo Pages"
+        app:layout_constraintTop_toBottomOf="@+id/btnmostrar"
+        tools:layout_editor_absoluteX="39dp" />
+
+    <Button
+        android:id="@+id/btnmostrar"
+        android:layout_width="332dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="80dp"
+        android:text="Button"
+        app:layout_constraintTop_toBottomOf="@+id/txtapellido"
+        tools:layout_editor_absoluteX="39dp" />
+
+    <EditText
+        android:id="@+id/txtnombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="87dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Nombre"
+        app:layout_constraintBottom_toTopOf="@+id/txtapellido"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="60dp" />
+
+    <EditText
+        android:id="@+id/txtapellido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Apellido"
+        app:layout_constraintTop_toBottomOf="@+id/txtnombre"
+        tools:layout_editor_absoluteX="60dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
