@@ -2,14 +2,20 @@ package com.example.pm012pp1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.pm012pp1.Procesos.Empleados;
 import com.example.pm012pp1.Procesos.SQLiteConexion;
 import com.example.pm012pp1.Procesos.Transsacciones;
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
@@ -29,6 +35,28 @@ public class ActivityList extends AppCompatActivity {
         conexion = new SQLiteConexion(this, Transsacciones.NameDataBase, null, 1);
         ObtenerListaEmpleados();
 
+        ArrayAdapter adp = new ArrayAdapter(this, android.R.layout.simple_list_item_1,ArregloEmpleados);
+
+        listemple.setAdapter(adp);
+
+        listemple.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int i, long l) {
+                String Info = "ID : "+ listaempleados.get(i).getId() + "\n"
+                        + listaempleados.get(i).getNombres();
+                Snackbar.make(view, Info, Snackbar.LENGTH_LONG).show();
+
+                Intent intentShare = new Intent();
+                intentShare.setAction(Intent.ACTION_SEND);
+                intentShare.putExtra(Intent.EXTRA_TEXT, Info);
+                intentShare.setType("text/plain");
+
+                Intent Share = Intent.createChooser(intentShare, null);
+                startActivity(Share);
+
+            }
+        });
 
     }
 
