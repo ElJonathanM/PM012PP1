@@ -14,6 +14,9 @@
         android:theme="@style/Theme.PM012PP1"
         tools:targetApi="31">
         <activity
+            android:name=".ActivityList"
+            android:exported="false" />
+        <activity
             android:name=".ActivityConsulta"
             android:exported="true">
             <intent-filter>
@@ -22,7 +25,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ActivityCrear"
             android:exported="true" />
@@ -31,9 +33,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>
