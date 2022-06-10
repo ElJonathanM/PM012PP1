@@ -53,7 +53,6 @@ public class ActivityCombo extends AppCompatActivity {
                 edad.setText(listaempleados.get(position).getEdad().toString());
                 correo.setText(listaempleados.get(position).getCorreo());
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
