@@ -5,47 +5,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ActivityCombo">
+    tools:context=".ActivityCombo"
+    android:gravity="center"
+    android:background="@drawable/fondo">
 
 
     <Spinner
-        android:id="@+id/txtcomboPersona"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <EditText
-        android:id="@+id/txtconnombres"
+        android:id="@+id/comboPersona"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-
-        android:text="Name" />
+        android:textSize="22dp"
+        android:textColor="@color/design_default_color_primary_dark"/>
 
     <EditText
-        android:id="@+id/txtconapellidos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name" />
-
-    <EditText
-        android:id="@+id/txtconedad"
+        android:id="@+id/txtaconnombres"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
-        android:text="Name" />
+        android:hint="Nombres"
+        android:textSize="22dp"
+        android:textColor="@color/design_default_color_primary_dark"/>
 
     <EditText
-        android:id="@+id/txtconemail"
+        android:id="@+id/txtaconapellidos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
-        android:text="Name" />
+        android:hint="Apellidos"
+        android:textSize="22dp"
+        android:textColor="@color/design_default_color_primary_dark"/>
+
+    <EditText
+        android:id="@+id/txtaconedad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:hint="Edad"
+        android:textSize="22dp"
+        android:textColor="@color/design_default_color_primary_dark"/>
+
+    <EditText
+        android:id="@+id/txtaconemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:hint="Correo"
+        android:textSize="22dp"
+        android:textColor="@color/design_default_color_primary_dark"/>
 
 </LinearLayout>

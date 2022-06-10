@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -29,17 +31,34 @@ public class ActivityCombo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_combo);
         
-        nombres = (EditText) findViewById(R.id.txtconnombres);
-        apellidos = (EditText) findViewById(R.id.txtconapellidos);
-        edad = (EditText) findViewById(R.id.txtconedad);
-        correo = (EditText) findViewById(R.id.txtconemail);
-        comboEmpleado = (Spinner) findViewById(R.id.txtcomboPersona);
+        nombres = (EditText) findViewById(R.id.txtaconnombres);
+        apellidos = (EditText) findViewById(R.id.txtaconapellidos);
+        edad = (EditText) findViewById(R.id.txtaconedad);
+        correo = (EditText) findViewById(R.id.txtaconemail);
+        comboEmpleado = (Spinner) findViewById(R.id.comboPersona);
         
         conexion  = new SQLiteConexion(this, Transsacciones.NameDataBase, null, 1);
         
         ObtenerListaEmpleados();
 
         ArrayAdapter<CharSequence> adp = new ArrayAdapter(this, android.R.layout.simple_spinner_item, ArregloEmpleados);
+        comboEmpleado.setAdapter(adp);
+
+        comboEmpleado.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                nombres.setText(listaempleados.get(position).getNombres());
+                apellidos.setText(listaempleados.get(position).getApellidos());
+                edad.setText(listaempleados.get(position).getEdad().toString());
+                correo.setText(listaempleados.get(position).getCorreo());
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
     }
 
