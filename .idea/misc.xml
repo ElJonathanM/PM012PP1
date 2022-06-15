@@ -3,12 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/User/AndroidStudioProjects/PM012PP1/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.226" />
         <entry key="..\:/Users/User/AndroidStudioProjects/PM012PP1/app/src/main/res/layout/activity_combo.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/PM012PP1/app/src/main/res/layout/activity_consulta.xml" value="0.2" />
         <entry key="..\:/Users/User/AndroidStudioProjects/PM012PP1/app/src/main/res/layout/activity_crear.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/PM012PP1/app/src/main/res/layout/activity_list.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/PM012PP1/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/PM012PP1/app/src/main/res/layout/activity_main2.xml" value="0.14" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/PM012PP1/app/src/main/res/layout/activity_photo.xml" value="0.25" />
       </map>
     </option>
   </component>

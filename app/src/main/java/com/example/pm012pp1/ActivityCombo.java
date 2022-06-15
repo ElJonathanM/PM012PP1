@@ -54,7 +54,7 @@ public class ActivityCombo extends AppCompatActivity {
                 correo.setText(listaempleados.get(position).getCorreo());
             }
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {
+            public void onNothingSelected(AdapterView<?> adapterView) {
 
             }
         });
